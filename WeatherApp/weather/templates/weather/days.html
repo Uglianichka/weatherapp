@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Домашняя страница</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+<div class="d-flex flex-col
+umn flex-md-row align-items-center pb-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+         <h1><span class="fs-4">Погодное приложение</span></h1>
+      </a>
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'glav' %}">Главная</a>
+          <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'home' %}">Домашняя</a>
+        </nav>
+    </div>
+    <div class="contrainer mt-5">
+        <div row = "row">
+            <div class = "col-5 offset-1">
+            </div>
+            <div class = "col-4 offset-1">
+                <h1>Погода дома</h1>
+                <form action="">
+                <input type="submit" name="send" value="Узнать" class = "btn btn-outline-primary">
+                </form>
+                <br>
+                <div class="alert alert-primary">
+                    <div class="alert alert-danger">
+                        <h1> <b>  Город:  </b>{{ info.city }}<br> </h1>
+                        <h2><b>Температура: </b>{{ info.temp }}<sup>0</sup><br></h2>
+                        <h2><b>Дней: </b>{{ info.days }}<sup>0</sup><br></h2>
+                        <img src = "http://openweathermap.org/img/w/{{ info.icon }}.png" width="150" height="150" alt = "Фото погоды">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<body background="https://www.sb.by/upload/iblock/ba0/ba0aceb9f50cce9b343aab74dc62551a.JPG">
+  <p>...</p>
+ </body>
+</html>
